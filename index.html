@@ -13,20 +13,26 @@
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1.5in" height="1.5in" viewBox="0 0 90 90">
     <!-- Circle -->
     <circle cx="45" cy="45" r="45" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
-    
+
     <!-- Text in the center (one word per line) -->
-    <text x="50%" y="50%" font-family="Arial" font-size="8" fill="#000000">
-        <tspan x="50%" dy="-0.5em">Respect,</tspan>
-        <tspan x="50%" dy="1em">Integrity,</tspan>
-        <tspan x="50%" dy="1em">Service,</tspan>
-        <tspan x="50%" dy="1em">Excellence</tspan>
+    <text x="50%" y="50%" font-family="Arial" font-size="8" fill="#000000" text-anchor="middle" dominant-baseline="middle">
+        <tspan dy="-0.5em">Respect,</tspan>
+        <tspan dy="1em">Integrity,</tspan>
+        <tspan dy="1em">Service,</tspan>
+        <tspan dy="1em">Excellence</tspan>
     </text>
-    
+
     <!-- Text around the edge -->
-    <text x="50%" y="10" font-family="Arial" font-size="4" fill="#000000" text-anchor="middle">
-        Be kind whenever possible. It is always possible.
+    <defs>
+        <path id="circlePath" d="M45,90 A45,45 0 1,0 45,-90 A45,45 0 1,0 45,90" />
+    </defs>
+    <text font-family="Arial" font-size="4" fill="#000000">
+        <textPath xlink:href="#circlePath" startOffset="50%">
+            Be kind whenever possible. It is always possible.
+        </textPath>
     </text>
 </svg>
+
 </div>
 
 
